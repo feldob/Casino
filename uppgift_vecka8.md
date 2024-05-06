@@ -23,7 +23,7 @@
 ## **Del 3: Tillämpning och granskning av arv (1.5 timmar)**
 
 ### **3.1 Implementera arv i ditt projekt**
-- **Uppgift:** Läs om (fel-)användning av Enums [här](https://betterprogramming.pub/when-to-and-when-not-to-use-enums-in-java-8d6fb17ba978). Identifiera en lämplig situation i ditt projekt där arv från klasser eller användning av abstrakta klasser skulle kunna tillföra strukturellt värde och förenkla koden.
+- **Uppgift:** Läs om (fel-)användning av Arv [här](https://betterprogramming.pub/when-to-and-when-not-to-use-enums-in-java-8d6fb17ba978). Identifiera en lämplig situation i ditt projekt där arv från klasser eller användning av abstrakta klasser skulle kunna tillföra strukturellt värde och förenkla koden.
 - **Exempel:** Implementera en bas-klass `Fordon` som kan ärvas av specifika fordonsklasser som `Bil`, `Cykel`, etc.
 
 ### **3.2 Granska och begränsa användningen av arv**
