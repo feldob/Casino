@@ -22,8 +22,28 @@ Ni kan köra alla tester lokalt genom maven med goal `test` som kör alla tester
 
 När alla tester kör igenom och du får meddelandet "BUILD SUCCESSFUL" kan du uppdatera din remote repo med dina ändringar. Bra jobbat!
 
-## **Del 4: Pass by reference**
-Att förstå hur objekt behandlas när de går mellan metodanrop är viktigt för att verkligen förstå hur Java fungerar i djupet. Fundera på 2-3 testfall som kan validera att Java faktiskt använder Pass by reference och inte pass by value för objekt. Fundera vad du skulle förvänta dig i båda fall och skriv tester som utgår ifrån att Java implementerar pass by reference korrekt. Det spelar ingen roll vilka klasser och metoder du använder, men bra om du håller klasserna enkla. Några tips:
-- När man returnerar från en metod får man referens till objekt tillbaka som kan sedan jämföras med andra objekt, tex för likhet i deras fält.
-- Metoden som testas måste ha minst en objekt parameter.
-- Fundera på : Vad är skillnaden i objekt som returneras av en metod om det är pass by value eller pass by reference?
+## **Del 4: Pass by Value**
+
+Att förstå hur objekt behandlas när de går mellan metodanrop är viktigt för att verkligen förstå hur Java fungerar. I Java används pass by value, vilket innebär att metoden får en kopia av värdet som skickas in, oavsett om värdet är en primitiv typ eller en referens till ett objekt. Här är några testfall som visar hur detta fungerar:
+
+### Uppgift:
+
+1. **Testfall 1: Ändra ett objekts fält inom en metod**
+    - Skapa ett objekt och skriv en metod som ändrar ett av objektets fält.
+    - Skriv ett test som kontrollerar om ändringen påverkar det ursprungliga objektet efter metodanropet.
+
+2. **Testfall 2: Försök att ändra objektets referens inom en metod**
+    - Skapa ett objekt och skriv en metod som försöker ändra objektets referens.
+    - Skriv ett test som kontrollerar om referensändringen påverkar det ursprungliga objektet efter metodanropet.
+
+### Tips:
+- När du returnerar från en metod får du en referens till objektet som kan jämföras med andra objekt, till exempel för likhet i deras fält.
+- Metoden som testas måste ha minst en objektparameter.
+- Fundera på: Vad är skillnaden i objekt som returneras av en metod om det är pass by value?
+
+### Syfte
+- Förstå att Java använder pass by value, vilket innebär att en kopia av referensen till objektet skickas till metoden.
+- Ändringar av objektets fält inom metoden påverkar det ursprungliga objektet eftersom referensen pekar på samma objekt.
+- Ändringar av själva referensen inom metoden påverkar inte det ursprungliga objektet utanför metoden.
+
+Genom att utföra dessa uppgifter kan du se hur Java hanterar objekt och metoder med pass by value.
