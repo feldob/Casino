@@ -39,7 +39,6 @@ Att förstå hur objekt behandlas när de går mellan metodanrop är viktigt fö
 ### Tips:
 - När du returnerar från en metod får du en referens till objektet som kan jämföras med andra objekt, till exempel för likhet i deras fält.
 - Metoden som testas måste ha minst en objektparameter.
-- Fundera på: Vad är skillnaden i objekt som returneras av en metod om det är pass by value?
 
 ### Syfte
 - Förstå att Java använder pass by value, vilket innebär att en kopia av referensen till objektet skickas till metoden.
